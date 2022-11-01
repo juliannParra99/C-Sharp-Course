@@ -1,0 +1,6 @@
+C:\Users\julian\Desktop\Curso C# Nivel 2\LaSintaxis\Funciones\obj\Debug\Funciones.csproj.CoreCompileInputs.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\LaSintaxis\Funciones\bin\Debug\Funciones.exe.config
+C:\Users\julian\Desktop\Curso C# Nivel 2\LaSintaxis\Funciones\bin\Debug\Funciones.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\LaSintaxis\Funciones\bin\Debug\Funciones.pdb
+C:\Users\julian\Desktop\Curso C# Nivel 2\LaSintaxis\Funciones\obj\Debug\Funciones.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\LaSintaxis\Funciones\obj\Debug\Funciones.pdb

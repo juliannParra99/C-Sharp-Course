@@ -1,0 +1,6 @@
+C:\Users\julian\Desktop\Curso C# Nivel 2\LaSintaxis\Vectores(array)\bin\Debug\Vectores(array).exe.config
+C:\Users\julian\Desktop\Curso C# Nivel 2\LaSintaxis\Vectores(array)\bin\Debug\Vectores(array).exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\LaSintaxis\Vectores(array)\bin\Debug\Vectores(array).pdb
+C:\Users\julian\Desktop\Curso C# Nivel 2\LaSintaxis\Vectores(array)\obj\Debug\Vectores(array).csproj.CoreCompileInputs.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\LaSintaxis\Vectores(array)\obj\Debug\Vectores(array).exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\LaSintaxis\Vectores(array)\obj\Debug\Vectores(array).pdb

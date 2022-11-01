@@ -1,0 +1,7 @@
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Ejemplo1\bin\Debug\Ejemplo1.exe.config
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Ejemplo1\bin\Debug\Ejemplo1.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Ejemplo1\bin\Debug\Ejemplo1.pdb
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.csproj.AssemblyReference.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.csproj.CoreCompileInputs.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.pdb

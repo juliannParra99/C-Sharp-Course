@@ -1,0 +1,7 @@
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Clases-y-Objetos--Ejemplo-Ventas\bin\Debug\Clases-y-Objetos--Ejemplo-Ventas.exe.config
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Clases-y-Objetos--Ejemplo-Ventas\bin\Debug\Clases-y-Objetos--Ejemplo-Ventas.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Clases-y-Objetos--Ejemplo-Ventas\bin\Debug\Clases-y-Objetos--Ejemplo-Ventas.pdb
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Clases-y-Objetos--Ejemplo-Ventas\obj\Debug\Clases-y-Objetos--Ejemplo-Ventas.csproj.AssemblyReference.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Clases-y-Objetos--Ejemplo-Ventas\obj\Debug\Clases-y-Objetos--Ejemplo-Ventas.csproj.CoreCompileInputs.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Clases-y-Objetos--Ejemplo-Ventas\obj\Debug\Clases-y-Objetos--Ejemplo-Ventas.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\Ejemplo1\Clases-y-Objetos--Ejemplo-Ventas\obj\Debug\Clases-y-Objetos--Ejemplo-Ventas.pdb
