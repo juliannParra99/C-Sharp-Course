@@ -13,8 +13,13 @@ namespace Metodo_ejemplo
             Persona persona = new Persona("JULIAN");
 
             persona.setEdad(23);
+           
             Console.WriteLine(persona.saludar() + " tengo " + persona.getEdad() + " años");
 
+            Console.WriteLine(persona.saludar("Jhon doe"));
+
+
+            //Ejemplo botella.
             Botella botella = new Botella("verde", "vidrio");
 
             
@@ -23,12 +28,21 @@ namespace Metodo_ejemplo
                 );
 
             Console.WriteLine("La cantidad actual es " + botella.CantidadActual);
-            botella.CantidadActual = 75;
+
+            botella.CantidadActual = 50;
             botella.Recargar();
             Console.WriteLine("La cantidad actual despues de recargar es de: " +  botella.CantidadActual + " y tiene un coste de " + botella.Recargar());
 
+            //sobrecarga  de metodo de botella.
+
+
+            Console.WriteLine("ejemplo sobrecarga de botella.");
+            Console.WriteLine("La cantidad actual a cargar " + botella.CantidadActual + " Con descuento el precio es " + botella.Recargar(42)
+                ); 
+
             Console.ReadKey();
             
+
 
             //PUEDE OPTIMIZARCE AUN MAS
         }

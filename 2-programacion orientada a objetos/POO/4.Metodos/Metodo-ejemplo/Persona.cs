@@ -32,5 +32,13 @@ namespace Metodo_ejemplo
         {
             return "Hola soy " + nombre;
         }
+
+        // SOBRECARGA DE METODO: es utilizar un mismo metodo, es decir con su nombre, pero implementando otras funcionalidades, ej. utilizando distintos parametros o ejecutando
+        //el codigo de otra manera. Asi, cuando se llama al metodo se lo hace con el mismo nombre; mismo metodo distintas funcionalidades
+
+        public string saludar(string nombre)
+        {
+            return "Hola " + nombre + ", un gusto mi nombre es " +  this.nombre;
+        }
     }
 }

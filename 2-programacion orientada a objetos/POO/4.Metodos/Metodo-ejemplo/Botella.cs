@@ -73,5 +73,33 @@ namespace Metodo_ejemplo
                 return   costo;
             }
         }
+
+        //Sobrecarga del metodo. // la misma funcion: pero si cargo mas de 40usd aplica un 10% de descuento; si es un dia de descuento esta este metodo, si carga mas de cuarenta hay descuento sino se aplica normal
+        public float Recargar(int recargaUSD )
+        {
+            if (recargaUSD > 40 && recargaUSD <= 50)
+            {
+                float costo;
+                costo = cantidadActual * 50 / 100;
+                float descuento = 10 * costo / 100;
+                float totalConDescuento = costo - descuento;
+                return totalConDescuento;
+            }
+            else if (cantidadActual >= 1 && cantidadActual <= 99 && cantidadActual != 100)
+            {
+
+                float costo;
+                costo = cantidadActual * 50 / 100;
+                return costo;
+                //100 50 
+                //dif x = ...
+            }
+            else
+            {
+                cantidadActual = 100;
+                float costo = 50;
+                return costo;
+            }
+        }
     }
 }
