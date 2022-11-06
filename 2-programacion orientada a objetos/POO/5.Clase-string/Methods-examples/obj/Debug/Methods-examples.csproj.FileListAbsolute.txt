@@ -1,0 +1,7 @@
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\5.Clase-string\Methods-examples\bin\Debug\Methods-examples.exe.config
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\5.Clase-string\Methods-examples\bin\Debug\Methods-examples.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\5.Clase-string\Methods-examples\bin\Debug\Methods-examples.pdb
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\5.Clase-string\Methods-examples\obj\Debug\Methods-examples.csproj.AssemblyReference.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\5.Clase-string\Methods-examples\obj\Debug\Methods-examples.csproj.CoreCompileInputs.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\5.Clase-string\Methods-examples\obj\Debug\Methods-examples.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\5.Clase-string\Methods-examples\obj\Debug\Methods-examples.pdb
