@@ -1,0 +1,7 @@
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Herencia\Vehiculo\bin\Debug\Vehiculo.exe.config
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Herencia\Vehiculo\bin\Debug\Vehiculo.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Herencia\Vehiculo\bin\Debug\Vehiculo.pdb
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Herencia\Vehiculo\obj\Debug\Vehiculo.csproj.AssemblyReference.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Herencia\Vehiculo\obj\Debug\Vehiculo.csproj.CoreCompileInputs.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Herencia\Vehiculo\obj\Debug\Vehiculo.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Herencia\Vehiculo\obj\Debug\Vehiculo.pdb
