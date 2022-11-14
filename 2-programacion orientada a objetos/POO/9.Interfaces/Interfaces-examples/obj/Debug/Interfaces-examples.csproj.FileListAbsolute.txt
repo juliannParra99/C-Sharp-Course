@@ -1,0 +1,7 @@
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\9.Interfaces\Interfaces-examples\bin\Debug\Interfaces-examples.exe.config
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\9.Interfaces\Interfaces-examples\bin\Debug\Interfaces-examples.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\9.Interfaces\Interfaces-examples\bin\Debug\Interfaces-examples.pdb
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\9.Interfaces\Interfaces-examples\obj\Debug\Interfaces-examples.csproj.AssemblyReference.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\9.Interfaces\Interfaces-examples\obj\Debug\Interfaces-examples.csproj.CoreCompileInputs.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\9.Interfaces\Interfaces-examples\obj\Debug\Interfaces-examples.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\9.Interfaces\Interfaces-examples\obj\Debug\Interfaces-examples.pdb
