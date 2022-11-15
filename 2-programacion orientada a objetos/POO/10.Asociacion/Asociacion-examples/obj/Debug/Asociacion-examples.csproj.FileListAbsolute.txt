@@ -1,0 +1,7 @@
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Asociacion\Asociacion-examples\bin\Debug\Asociacion-examples.exe.config
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Asociacion\Asociacion-examples\bin\Debug\Asociacion-examples.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Asociacion\Asociacion-examples\bin\Debug\Asociacion-examples.pdb
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Asociacion\Asociacion-examples\obj\Debug\Asociacion-examples.csproj.AssemblyReference.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Asociacion\Asociacion-examples\obj\Debug\Asociacion-examples.csproj.CoreCompileInputs.cache
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Asociacion\Asociacion-examples\obj\Debug\Asociacion-examples.exe
+C:\Users\julian\Desktop\Curso C# Nivel 2\2-programacion orientada a objetos\POO\Asociacion\Asociacion-examples\obj\Debug\Asociacion-examples.pdb
