@@ -40,7 +40,7 @@ namespace App
 
         }
 
-        private void btnVerPerfil_Click(object sender, EventArgs e)
+        private void btnVerPerfil_Click(object sender, EventArgs e) //el  "&" antes de una letra en la propiedad "text" se usa para agregar SHORTCUTS
         {
             string nombre = txtNombre.Text;
 
@@ -62,7 +62,8 @@ namespace App
             }
             else tipo = "Squibs";
 
-            string colorForito = cboColorFavorito.SelectedItem.ToString(); //selectedItem devuelve un OBJECT, por que se le puede cargar cualquier
+            //esto hay que validarlo para que cuando no se llenen los datos no se rompa
+            string colorForito = cboColorFavorito.SelectedItem.ToString();  //selectedItem devuelve un OBJECT, por que se le puede cargar cualquier
             //tipo de objeto, como yo se que  adentro tiene un string uso toString(), si fuera un objeto de tipo botella tendria que hacer la conversion correspondiente
             string numeroFavorito = numNumeroFavorito.Value.ToString();
 

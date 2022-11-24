@@ -52,28 +52,34 @@ namespace App
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(187, 415);
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAgregar.Location = new System.Drawing.Point(77, 434);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.Size = new System.Drawing.Size(90, 23);
+            this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(129, 46);
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombre.Location = new System.Drawing.Point(127, 46);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 1;
+            this.txtNombre.Size = new System.Drawing.Size(236, 20);
+            this.txtNombre.TabIndex = 0;
             // 
             // lvElementos
             // 
+            this.lvElementos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvElementos.HideSelection = false;
-            this.lvElementos.Location = new System.Drawing.Point(61, 341);
+            this.lvElementos.Location = new System.Drawing.Point(77, 361);
             this.lvElementos.Name = "lvElementos";
-            this.lvElementos.Size = new System.Drawing.Size(121, 97);
-            this.lvElementos.TabIndex = 2;
+            this.lvElementos.Size = new System.Drawing.Size(299, 67);
+            this.lvElementos.TabIndex = 7;
             this.lvElementos.UseCompatibleStateImageBehavior = false;
             this.lvElementos.View = System.Windows.Forms.View.List;
             // 
@@ -89,7 +95,7 @@ namespace App
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(12, 95);
+            this.lblFecha.Location = new System.Drawing.Point(12, 101);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(109, 13);
             this.lblFecha.TabIndex = 4;
@@ -97,10 +103,12 @@ namespace App
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(140, 95);
+            this.dtpFechaNacimiento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(127, 95);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaNacimiento.TabIndex = 5;
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(236, 20);
+            this.dtpFechaNacimiento.TabIndex = 1;
             // 
             // ckbComida
             // 
@@ -108,7 +116,7 @@ namespace App
             this.ckbComida.Location = new System.Drawing.Point(140, 131);
             this.ckbComida.Name = "ckbComida";
             this.ckbComida.Size = new System.Drawing.Size(122, 17);
-            this.ckbComida.TabIndex = 6;
+            this.ckbComida.TabIndex = 2;
             this.ckbComida.Text = "Te gusta la comida?";
             this.ckbComida.UseVisualStyleBackColor = true;
             // 
@@ -129,7 +137,7 @@ namespace App
             this.rbtWizard.Location = new System.Drawing.Point(31, 19);
             this.rbtWizard.Name = "rbtWizard";
             this.rbtWizard.Size = new System.Drawing.Size(58, 17);
-            this.rbtWizard.TabIndex = 8;
+            this.rbtWizard.TabIndex = 1;
             this.rbtWizard.TabStop = true;
             this.rbtWizard.Text = "Wizard";
             this.rbtWizard.UseVisualStyleBackColor = true;
@@ -156,28 +164,31 @@ namespace App
             // 
             // gbTipo
             // 
+            this.gbTipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbTipo.Controls.Add(this.rbtWizard);
             this.gbTipo.Controls.Add(this.rbtMuggle);
             this.gbTipo.Controls.Add(this.rbtSquibs);
-            this.gbTipo.Location = new System.Drawing.Point(91, 163);
+            this.gbTipo.Location = new System.Drawing.Point(43, 154);
             this.gbTipo.Name = "gbTipo";
-            this.gbTipo.Size = new System.Drawing.Size(356, 51);
-            this.gbTipo.TabIndex = 12;
+            this.gbTipo.Size = new System.Drawing.Size(341, 51);
+            this.gbTipo.TabIndex = 3;
             this.gbTipo.TabStop = false;
             this.gbTipo.Text = "Tipo:";
             // 
             // cboColorFavorito
             // 
+            this.cboColorFavorito.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboColorFavorito.FormattingEnabled = true;
-            this.cboColorFavorito.Location = new System.Drawing.Point(162, 220);
+            this.cboColorFavorito.Location = new System.Drawing.Point(122, 215);
             this.cboColorFavorito.Name = "cboColorFavorito";
-            this.cboColorFavorito.Size = new System.Drawing.Size(154, 21);
-            this.cboColorFavorito.TabIndex = 13;
+            this.cboColorFavorito.Size = new System.Drawing.Size(241, 21);
+            this.cboColorFavorito.TabIndex = 4;
             // 
             // lblColor
             // 
             this.lblColor.AutoSize = true;
-            this.lblColor.Location = new System.Drawing.Point(83, 228);
+            this.lblColor.Location = new System.Drawing.Point(49, 223);
             this.lblColor.Name = "lblColor";
             this.lblColor.Size = new System.Drawing.Size(72, 13);
             this.lblColor.TabIndex = 14;
@@ -185,15 +196,17 @@ namespace App
             // 
             // numNumeroFavorito
             // 
-            this.numNumeroFavorito.Location = new System.Drawing.Point(173, 272);
+            this.numNumeroFavorito.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numNumeroFavorito.Location = new System.Drawing.Point(122, 265);
             this.numNumeroFavorito.Name = "numNumeroFavorito";
-            this.numNumeroFavorito.Size = new System.Drawing.Size(120, 20);
-            this.numNumeroFavorito.TabIndex = 15;
+            this.numNumeroFavorito.Size = new System.Drawing.Size(241, 20);
+            this.numNumeroFavorito.TabIndex = 5;
             // 
             // lblNumeroFavorito
             // 
             this.lblNumeroFavorito.AutoSize = true;
-            this.lblNumeroFavorito.Location = new System.Drawing.Point(82, 279);
+            this.lblNumeroFavorito.Location = new System.Drawing.Point(36, 272);
             this.lblNumeroFavorito.Name = "lblNumeroFavorito";
             this.lblNumeroFavorito.Size = new System.Drawing.Size(85, 13);
             this.lblNumeroFavorito.TabIndex = 16;
@@ -201,11 +214,15 @@ namespace App
             // 
             // btnVerPerfil
             // 
-            this.btnVerPerfil.Location = new System.Drawing.Point(321, 279);
+            this.btnVerPerfil.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnVerPerfil.FlatAppearance.BorderSize = 2;
+            this.btnVerPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btnVerPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerPerfil.Location = new System.Drawing.Point(77, 308);
             this.btnVerPerfil.Name = "btnVerPerfil";
-            this.btnVerPerfil.Size = new System.Drawing.Size(126, 23);
-            this.btnVerPerfil.TabIndex = 17;
-            this.btnVerPerfil.Text = "Ver perfil:";
+            this.btnVerPerfil.Size = new System.Drawing.Size(116, 32);
+            this.btnVerPerfil.TabIndex = 6;
+            this.btnVerPerfil.Text = "&Ver perfil:";
             this.btnVerPerfil.UseVisualStyleBackColor = true;
             this.btnVerPerfil.Click += new System.EventHandler(this.btnVerPerfil_Click);
             // 
@@ -213,7 +230,8 @@ namespace App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(460, 490);
             this.Controls.Add(this.btnVerPerfil);
             this.Controls.Add(this.lblNumeroFavorito);
             this.Controls.Add(this.numNumeroFavorito);
@@ -228,8 +246,12 @@ namespace App
             this.Controls.Add(this.lvElementos);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnAgregar);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(714, 529);
+            this.MinimumSize = new System.Drawing.Size(476, 529);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Perfil Form";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gbTipo.ResumeLayout(false);
             this.gbTipo.PerformLayout();
