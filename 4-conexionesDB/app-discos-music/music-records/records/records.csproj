@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="Discos.cs" />
     <Compile Include="DiscosNegocio.cs" />
+    <Compile Include="Edicion.cs" />
+    <Compile Include="Estilo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

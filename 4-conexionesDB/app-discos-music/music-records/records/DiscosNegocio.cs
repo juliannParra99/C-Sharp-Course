@@ -27,7 +27,7 @@ namespace records
             {//configuro los objetos traidos de la libreria. empiezo por la cadena de conexion
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=DISCOS_DB; integrated security=true"; //direccion de motor de base datos; cadena de conexion, adonde me voy a conectar: paso los datos de servidor, en este caso sql; en seguridad depende, hay que ponen usuario y contraseña segun el caso
                 comando.CommandType = System.Data.CommandType.Text; //para realizar una accion; realizar una lectura; para que le pueda mandar  la sentencia sql en la proxima linea
-                comando.CommandText = "SELECT  Titulo, CantidadCanciones, UrlImagenTapa FROM DISCOS "; //la consulta sql
+                comando.CommandText = "SELECT D.Titulo,D.CantidadCanciones,D.UrlImagenTapa, E.Descripcion Estilo,TE.Descripcion Edicion FROM DISCOS D, TIPOSEDICION TE, ESTILOS E where D.IdEstilo = E.Id  AND D.IdTipoEdicion = TE.Id"; //la consulta sql
                 comando.Connection = conexion; // el comando de las ultimas 2 lineas las ejecuto en  la conexion de hace 3 lineas
 
                 conexion.Open();
@@ -41,6 +41,11 @@ namespace records
                     aux.Titulo = lector.GetString(0); //le cargo de lector el tipo de dato y el indice dentro de la consulta que arme
                     aux.CantidadCanciones = (int)lector["CantidadCanciones"]; //le paso el nombre de la columna ;lo convierto explicitamente indicando el tipo de dato que contiene: CASTEO EXPLICITO
                     aux.UrlImagen = (string)lector["UrlImagenTapa"];
+                    aux.Estilo = new Estilo(); //establezco la referencia al objeto por que la prop Estilo de Discos es un objeto de tipo Estilo.
+                    aux.Estilo.Estilo_disco = (string)lector["Estilo"];
+                    aux.Edicion = new Edicion();
+                    aux.Edicion.Edicion_disco = (string)lector["Edicion"];
+        
 
                     lista.Add(aux); //por cada vuelta del ciclo guardo un objeto en la lista con las filas de las columnas que traigo; reutiliza la variable aux y crea una nueva isntancia
                     //haciendo que con una misma variable se haga referencia a un nuevo objeto; aux se va a instanciar con cada vuelta; la lsita b a tener referencia a distintos objetos

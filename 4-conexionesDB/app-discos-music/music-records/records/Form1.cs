@@ -36,6 +36,9 @@ namespace records
             //data source lo recibe y lo modela en la tabla, lee la estrucutra de la clase disco , mediante una tecnica llamada reflection en sistemas,  y con esas propiedades
             //genera  automaticamente cada propiedad en cada columna
 
+            //para que no se vea la url de la imagen
+            dgvDiscos.Columns["urlIMagen"].Visible = false; //a columns le puedo pasar el indice o el nombre
+
             cargarImagen(ListaDiscos[0].UrlImagen); //Aca quiero que cuadno cargue el formulario, me devuelva la imagen de la url del primer pokemon de la lista
 
         }
