@@ -21,12 +21,12 @@ namespace negocio
             try
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=POKEDEX_DB; integrated security=true";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Numero, Nombre, P.Descripcion, UrlImagen, E.Descripcion Tipo, D.Descripcion Debilidad From POKEMONS P, ELEMENTOS E, ELEMENTOS D Where E.Id = P.IdTipo And D.Id = P.IdDebilidad";
-                comando.Connection = conexion;
+                comando.CommandType = System.Data.CommandType.Text;// 2 en acceso datos
+                comando.CommandText = "Select Numero, Nombre, P.Descripcion, UrlImagen, E.Descripcion Tipo, D.Descripcion Debilidad From POKEMONS P, ELEMENTOS E, ELEMENTOS D Where E.Id = P.IdTipo And D.Id = P.IdDebilidad"; //2 en acceso datos
+                comando.Connection = conexion;//3
 
-                conexion.Open();
-                lector = comando.ExecuteReader();
+                conexion.Open();//3
+                lector = comando.ExecuteReader();//3
 
                 while (lector.Read())
                 {
