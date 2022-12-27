@@ -14,9 +14,9 @@ namespace negocio
         public List<Pokemon> listar()
         {
             List<Pokemon> lista = new List<Pokemon>();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
+            SqlConnection conexion = new SqlConnection();//1 para centralizarce en accesoDatos y ahorrar codigo.
+            SqlCommand comando = new SqlCommand();//1
+            SqlDataReader lector;//1
 
             try
             {
@@ -43,7 +43,7 @@ namespace negocio
                     lista.Add(aux);
                 }
 
-                conexion.Close();
+                conexion.Close();//4
                 return lista;
             }
             catch (Exception ex)

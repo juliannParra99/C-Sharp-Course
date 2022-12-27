@@ -26,7 +26,7 @@ namespace negocio
         private SqlConnection conexion;
         private SqlCommand comando;
         private SqlDataReader lector;
-        public SqlDataReader Lector//metodo para pder leer el lector desde el exterior, no escribirlo, solo leerlo
+        public SqlDataReader Lector//metodo para poder leer el lector desde el exterior, no escribirlo, solo leerlo
         {
             get { return lector; }
         }
@@ -44,7 +44,7 @@ namespace negocio
             comando.CommandText = consulta;
         }
 
-        //
+        ///abre la conexion  y ejecuta la conexion, y la ejecucion devuelve un lector
         public void ejecutarLectura()
         {
             comando.Connection = conexion;
@@ -62,7 +62,7 @@ namespace negocio
         public void cerrarConexion()
         {
             if (lector != null)  //osea si realice una lectura y tengo el lector, cierro
-                lector.Close();//cierro lector
+                lector.Close();//cierro lector; el lector, al igual que la conexion hay que cerrarla
             conexion.Close();//cierro conexion
         }
 
