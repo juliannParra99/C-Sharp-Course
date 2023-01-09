@@ -10,6 +10,13 @@ using System.Windows.Forms;
 using dominio;
 using negocio;
 
+//en este ejemplo se agrega al codigo la posibilidad de poder realizar una insercion de pokemons y algunos de sus atributos a la base de datos.
+
+//en el ejemplo:
+//-se agrego un frmAltaPokemons form 
+//- se agrego metodo en AccesoDatos
+//- se agrega contenido a pokemonNegocio
+
 namespace winform_app
 {
     public partial class frmPokemons : Form
@@ -48,9 +55,11 @@ namespace winform_app
             }
         }
 
+        //para dar de alta los nuevos valores
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAltaPokemon alta = new frmAltaPokemon();
+            frmAltaPokemon alta = new frmAltaPokemon(); //esto instancia la clase y crea el objeto que me va a permitir poder utilizar los metodos
+            //de frmAltaPokemon
             alta.ShowDialog();
         }
     }

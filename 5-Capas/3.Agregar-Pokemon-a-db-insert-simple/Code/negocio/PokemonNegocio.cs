@@ -53,12 +53,16 @@ namespace negocio
 
         }
 
+        //metodo para poder conectarme a la base de datos; y agregar un pokemon; se agrego en la clase anterior peroa ahora le agregamos funcionalidad
         public void agregar(Pokemon nuevo)
         {
+            //no necesita una lista por que no va  a traer datos sino que los va a insertar
             AccesoDatos datos = new AccesoDatos();
 
             try
-            {
+            {//le agregamos la consulta de insercion para el elemento que queremos agregar
+
+                //ESTO INYECTTA EN LA CONSULTA DE INSERCION LOS VALORES CAPTURADOS QUE YO NECESTI
                 datos.setearConsulta("Insert into POKEMONS (Numero, Nombre, Descripcion, Activo)values(" + nuevo.Numero + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', 1)");
                 datos.ejecutarAccion();
             }

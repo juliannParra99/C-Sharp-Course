@@ -19,13 +19,17 @@ namespace winform_app
             InitializeComponent();
         }
 
+        //cuando toco el boton cerrar se cierra ese formulario
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        //cuando hago click en agregar
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            //aca lo que hago es que todas los valores que la persona vaya cargando en el formulario, los voy  a guardar en las propiedades del 
+            //objeto pokemon cuando haga click en el boton aceptar
             Pokemon poke = new Pokemon();
             PokemonNegocio negocio = new PokemonNegocio();
 
@@ -37,7 +41,7 @@ namespace winform_app
 
                 negocio.agregar(poke);
                 MessageBox.Show("Agregado exitosamente");
-                Close();
+                Close(); //para que vuelva  a la pestaña principal
 
             }
             catch (Exception ex)

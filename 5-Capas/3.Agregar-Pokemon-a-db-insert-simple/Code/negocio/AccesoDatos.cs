@@ -43,13 +43,14 @@ namespace negocio
             }
         }
 
+        //secccion agregada necesario para que se pueda ejecutar el insert que queremos hacer; por que aca no usamos un lector por que no queremos leer, queremos insertar
         public void ejecutarAccion()
         {
             comando.Connection = conexion;
             try
             {
                 conexion.Open();
-                comando.ExecuteNonQuery();
+                comando.ExecuteNonQuery(); //para que ocurra el insert; ejecuta la sentencia sql; en este caso no utilizamos el executeReader
             }
             catch (Exception ex)
             {
