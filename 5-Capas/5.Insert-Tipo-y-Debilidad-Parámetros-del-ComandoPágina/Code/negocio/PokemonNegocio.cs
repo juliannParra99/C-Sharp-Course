@@ -59,7 +59,11 @@ namespace negocio
 
             try
             {
+                //inyecto los valores del nuevo pokemon que le pase al metodo agregar pokemon// se muestran 2 maneras de agregar los valores; la que ya use antes y  la forma con @idTipo y @idDebilidad
+                //que son variables llamadas parametros a las que les asignaremos valor mediante un metodo que se creara, al agregarlos al COMANDO, que esta encapsulado en la clase acceso datos
+                // 
                 datos.setearConsulta("Insert into POKEMONS (Numero, Nombre, Descripcion, Activo, IdTipo, IdDebilidad)values(" + nuevo.Numero + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', 1, @idTipo, @idDebilidad)");
+                //ahora configuro los parametros con el metodo setearParametros de la clase AccesoDatos
                 datos.setearParametro("@idTipo", nuevo.Tipo.Id);
                 datos.setearParametro("@idDebilidad", nuevo.Debilidad.Id);
                 datos.ejecutarAccion();

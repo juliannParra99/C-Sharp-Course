@@ -57,6 +57,7 @@ namespace negocio
             }
         }
 
+        //para validar los parametros(variable) de la consulta; lo hago agregando esos parametros y configurando en el comando
         public void setearParametro(string nombre, object valor)
         {
             comando.Parameters.AddWithValue(nombre, valor);
