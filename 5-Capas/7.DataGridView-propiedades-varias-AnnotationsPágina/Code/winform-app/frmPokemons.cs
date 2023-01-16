@@ -10,6 +10,19 @@ using System.Windows.Forms;
 using dominio;
 using negocio;
 
+//se le agrega a la grilla la propiedad selecctedmode : fullRowSelected (em diseño)
+
+//tambien se modifca las celdas de la grilla para que no se puedan modificar los registros: para eso voy a diseño, editMode: editProgrammatically
+//tambien dejo el multiselect: false, para que no me permita seleccionar varias rows; esto me va  aservir a posterior tambien cuando genere una manera de eliminar o modificar registros.
+
+//TAMBIEN, se realiza ajuste para que cuando doy de alta un nuevo pokemon se muestre inmediatamente en la grilla, en lugar de tener que cerrar la aplicacion y volverla a abrir;
+//para lo cual modifico el boton agregar. se crea el metodo cargar(), que contiene el mismo contenido que tenia frmPokemons_load, y que sirve
+//para mostrar los datos despues de dar de alta un nuevo pokemon
+
+//ADEMAS, se realiza modificacion de los nombres de la grilla: la grilla toma como nombre el nombre del atributo de la clase; si queremos
+//modificar el nombre para que las palabras esten separadas o agregarles tildes, etc, usamos una propiedad llamada ANNOTATIONS en la clase,
+//en este caso de pokemons; lo hacemos a partir del modelo de clases
+
 namespace winform_app
 {
     public partial class frmPokemons : Form
@@ -22,7 +35,8 @@ namespace winform_app
 
         private void frmPokemons_Load(object sender, EventArgs e)
         {
-            cargar();
+            cargar(); //se usa metodo cargar creado(); como para mostrar los datos despues de agregarlos se utiliza el mismo mecanismo, se encierra
+            //lo que estaba en frmPokemons_Load() en el metodo cargar para reutilizarlo
         }
 
         private void dgvPokemons_SelectionChanged(object sender, EventArgs e)
@@ -32,6 +46,7 @@ namespace winform_app
 
         }
 
+        // metodo nuevo
         private void cargar()
         {
             PokemonNegocio negocio = new PokemonNegocio();
@@ -39,7 +54,7 @@ namespace winform_app
             {
                 listaPokemon = negocio.listar();
                 dgvPokemons.DataSource = listaPokemon;
-                dgvPokemons.Columns["UrlImagen"].Visible = false;
+                dgvPokemons.Columns["UrlImagen"].Visible = false; //oculta columna
                 cargarImagen(listaPokemon[0].UrlImagen);
             }
             catch (Exception ex)
@@ -63,8 +78,8 @@ namespace winform_app
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAltaPokemon alta = new frmAltaPokemon();
-            alta.ShowDialog();
-            cargar();
+            alta.ShowDialog(); //devuelve un cuadro de texto de agregado exitosamente; cuando se cierra se ejecuta el cargar() 
+            cargar(); //cuando se cierra se ejecuta esto, para que se muestren los datos cargados automaticamente
         }
     }
 }
