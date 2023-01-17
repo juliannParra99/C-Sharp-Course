@@ -47,7 +47,7 @@ namespace winform_app
                 MessageBox.Show(ex.ToString());
             }
         }
-
+        //copio este metodo para poder usarlo  en Alta Pokemon; lo ideal seria modularizarlo para no tener que copiarlo tal cual; lo podria poner en otra clase
         private void cargarImagen(string imagen)
         {
             try
