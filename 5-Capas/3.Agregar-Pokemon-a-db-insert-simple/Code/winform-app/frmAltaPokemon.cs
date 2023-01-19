@@ -10,6 +10,12 @@ using System.Windows.Forms;
 using dominio;
 using negocio;
 
+//en este ejemplo solo vamos a hacer una insercion simple de los atributos de numero, nombre y descripcion; tipo y debilidad se agregaran despues
+//OJO: si cargamos en la base de datos algun registro que esta en null, nos dara un error, eso lo vamos a manejar posteriormente
+
+//en esta app se realiza una consulta relacionada por lo que, en este caso, como id tipo y id debilidad no tienen valores y no coinciden, no trae url imagen, por lo que no se rompe; pero si la url imagen se trae y esta en nulo
+//se rompe la app, por que no estoy validando el null
+
 namespace winform_app
 {
     public partial class frmAltaPokemon : Form
@@ -39,6 +45,7 @@ namespace winform_app
                 poke.Nombre = txtNombre.Text;
                 poke.Descripcion = txtDescripcion.Text;
 
+                //TEBGO MI BASE DATOS, LO MANDO A LA BASE DE DATOS CON MI OBJETO: POKEMON NEGOCIO
                 negocio.agregar(poke);
                 MessageBox.Show("Agregado exitosamente");
                 Close(); //para que vuelva  a la pestaña principal

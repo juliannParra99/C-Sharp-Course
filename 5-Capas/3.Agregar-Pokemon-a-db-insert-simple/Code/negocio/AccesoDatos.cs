@@ -50,6 +50,7 @@ namespace negocio
             try
             {
                 conexion.Open();
+                //ejecuta la sentencia de insercion
                 comando.ExecuteNonQuery(); //para que ocurra el insert; ejecuta la sentencia sql; en este caso no utilizamos el executeReader
             }
             catch (Exception ex)
