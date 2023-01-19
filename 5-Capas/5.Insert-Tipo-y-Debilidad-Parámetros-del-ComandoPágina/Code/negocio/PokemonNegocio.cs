@@ -52,7 +52,7 @@ namespace negocio
             }
 
         }
-
+        //modificamos el metodo agregar, modificamos la consulta para que ademas pueda insertar el idtipo y el idDebilidad; tengo que insertar un ID, osea un numero, el id del tipo
         public void agregar(Pokemon nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -63,7 +63,7 @@ namespace negocio
                 //que son variables llamadas parametros a las que les asignaremos valor mediante un metodo que se creara, al agregarlos al COMANDO, que esta encapsulado en la clase acceso datos
                 // 
                 datos.setearConsulta("Insert into POKEMONS (Numero, Nombre, Descripcion, Activo, IdTipo, IdDebilidad)values(" + nuevo.Numero + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', 1, @idTipo, @idDebilidad)");
-                //ahora configuro los parametros con el metodo setearParametros de la clase AccesoDatos
+                //ahora configuro los parametros con el metodo setearParametros de la clase AccesoDatos; remplaza en la insercion de una linea arriba el valor de esa variable
                 datos.setearParametro("@idTipo", nuevo.Tipo.Id);
                 datos.setearParametro("@idDebilidad", nuevo.Debilidad.Id);
                 datos.ejecutarAccion();

@@ -57,9 +57,11 @@ namespace negocio
             }
         }
 
-        //para validar los parametros(variable) de la consulta; lo hago agregando esos parametros y configurando en el comando
+        //creo nuevo metodo
+        //para validar los parametros(variable) de la consulta; lo hago agregando esos parametros y configurando en el comando; para asignarles un  valor
         public void setearParametro(string nombre, object valor)
         {
+            //addwithValue: permite que yo le carge el nombre del parametro y el valor (en object) que puede ser de caulquier tipo de dato
             comando.Parameters.AddWithValue(nombre, valor);
         }
 
