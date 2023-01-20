@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using dominio;
 
-//aca vamos a ver como validar cuando tenemos una columna nula en la base de datos y estamos leyendo resgistros. cuando queremos realizar una lectura
+//aca vamos a ver como validar cuando tenemos una columna  con un registro nulo en la base de datos y estamos leyendo resgistros. cuando queremos realizar una lectura
 //y hay una columna nula; tira una excepcion.
-//cuando una columna que queremos leer esta en nula, ahorra un error, por que la queremos leer pero no contiene ningun valor; por eso hay que validarlas.Pero
+//cuando una columna que queremos leer esta en nula, abra una excepcion, por que la queremos leer pero no contiene ningun valor; por eso hay que validarlas.Pero
 //solo hay que validar aquellas columnas que usamos que permiten null, las columnas 'not null' no permiten el null, por lo que no hace falta validarlas.
 
 namespace negocio
@@ -42,23 +42,29 @@ namespace negocio
                     aux.Numero = lector.GetInt32(0);
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
+                    //
                     //EN ESTE CASO EL ERROR SE DA POR QUE LA URL IMAGEN ESTA EN NULL POR LO QUE HAY QUE VALIDARLA; HAY DOS FORMAS:
                     //Primera forma: pregunto si lo que esta dentro del lector en esta columna esta en nulo, si lo que esta ahi dentro de la base de datos es nulo
-                    //no lo voy a leer; si no esta nulo lo voy a tratar de leer y lo voy a guardar en la propiedad; SOLO VOY A INTENTAR LEER SI NO ESTA NULO, para que no explote
+                    //no lo voy a poder leer; si no esta nulo lo voy a tratar de leer y lo voy a guardar en la propiedad; SOLO VOY A INTENTAR LEER ese registro SI NO ESTA NULO,
+                    //para que no crashee la aplicacion. si esta nulo no lo voy a leer
 
                     //pregunto si lo que esta dentro del lector es nulo (isdbnull), a esto lo hago indicando dentro de isDBNull el valor que quiero saber si es nulo,
-                    // a ese valor lo saco del LECTOR, y le indico la columna con getOrdinal("urlImagen"); Esto anterior va a leer los datos SI EL VALOR DENTRO DE LA
-                    //COLUMNA ES NULO, y no es lo que quiero por lo que lo niego "!()", entonces queda si lo que esta dentro de esa columna NO ES NULO; si no es nulo
-                    //lo leo, sino no
+                    // a ese valor lo saco del LECTOR, y le indico la columna con getOrdinal("urlImagen"); Esto anterior va a leer los datos SI EL VALOR del registro
+                    // DENTRO DE LA COLUMNA ES NULO, y no es lo que quiero, por lo que lo niego "!()", entonces queda 'si lo que esta dentro de esa columna NO ES NULO';
 
-                    //if(!(lector.IsDBNull(lector.GetOrdinal("UrlImagen"))))
+                    // si no es nulo lo leo, si es nulo no: A LOS NULOS NO LOS LEE
+
+
+                    //SI NO ES NULO LEO EL VALOR, SI ES NULO NO LO LEO, EL LECTOR LO SALTEA, ASI NO SE ROMPE LA APP.
+                    //primera forma
+                    //if(!(lector.IsDBNull(lector.GetOrdinal("UrlImagen")))) //si es nulo lo leo, sino no lo leo; GetOrdinal dice que columna esa
                     //    aux.UrlImagen = (string)lector["UrlImagen"];
 
                     //Segunda forma: la mas practica
-                    //si lo que esta en lector urlimagen no es dbnull lo leo; si no es dbnull trata de leerlo
+                    //si lo que esta en lector urlimagen no es dbnull lo leo; 
                     if(!(lector["UrlImagen"] is DBNull))
-                        //como no leemos el nulo de urlimagen, podemos leer sin que se rompa, por que asignamos en urlimagen al moemnto de leerlo como un string,
-                        //ppero en la base de datos sigue siendo nulo; para que no se rompa le asignamos un string vacio a aux.urlimagen.
+                        //como no leemos el nulo de urlimagen, podemos leer el resto sin que se rompa, por que asignamos en urlimagen al momento de leerlo como un string,
+                        //pero en la base de datos sigue siendo nulo; para que no se rompa le asignamos un string vacio a aux.urlimagen.
                         aux.UrlImagen = (string)lector["UrlImagen"];
 
                     aux.Tipo = new Elemento();

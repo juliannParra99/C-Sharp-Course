@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using dominio;
 using negocio;
 
+//IMP. Las validaciones solo se hacen cuando existe la posibilidad de que una columna tenga valor nulo, para que no se rompa; en NOT NULL no hace falta
+// primero debugueo el evento que usa el metodo, despues el metodo
 namespace winform_app
 {
     public partial class frmPokemons : Form
@@ -20,9 +22,12 @@ namespace winform_app
             InitializeComponent();
         }
 
-        //este evento es el que utiliza el metodo litar por lo que le agrego el try catch para que no se rompa; esto hace que por mas que haya una excepcion
-        //me muestre la excepcion pero pero que por lo menos se muestre la interfaz.Para arreglar esto, lo tengo que hacer en mi metodo Negocio.listar(), que lee
+        //este evento es el que utiliza el metodo listar() por lo que le agrego el try catch para que no se rompa; esto hace que por mas que haya una excepcion
+        //me muestre la excepcion, pero pero que por lo menos se muestre la interfaz.Para arreglar esto, lo tengo que hacer en mi metodo Negocio.listar(), que lee
         //desde la base de datos
+
+        // entonces el agrego el try catch al evento que invoca el metodo listar() para que no se rompa por la excepcion. ES UTIL VALIDAR TANTO EL METODO EN SI
+        //COMO EL EVENTO QUE LO INVOCA
         private void frmPokemons_Load(object sender, EventArgs e)
         {
             PokemonNegocio negocio = new PokemonNegocio();
