@@ -23,6 +23,11 @@ using negocio;
 //modificar el nombre para que las palabras esten separadas o agregarles tildes, etc, usamos una propiedad llamada ANNOTATIONS en la clase,
 //en este caso de pokemons; lo hacemos a partir del modelo de clases
 
+
+//SE CREA EL METODO CARGAR: QUE CONTIENE tal cual LO QUE CONTENIA frmPokemons_load, solo que creamos este metodo cargar por que como vamos a poder dar de alta 
+//nuevos pokemons, queremos que cuando se terminen de cargar se ejecute de nuevo para actualizar la grlla de pokemons. el metodo cargar se usa en 
+//frmPokemons_Load y en btnAgregar_Click
+
 namespace winform_app
 {
     public partial class frmPokemons : Form
