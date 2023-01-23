@@ -13,8 +13,17 @@ using negocio;
 
 //vamos a agregar la imagen y de ver la imagen mientras la estamos agregando.Primero acomodamos el formulario frmAltaPokemon y le damos nombre a los atributos,etc
 //para que podamos referirnos a esos objetos cuando le demos logica despues: se le agrega al pictureBox el nombre de pbxPokemon, y el size mode stretch
-//voy a gregar que cuando yo pongo una url pueda ver la imagen en el picture box
+//voy a gregar que cuando yo pongo una url pueda ver la imagen en el picture box; para lo que
 //le agrego a la textBox urlImagen el evento "leave", para que cuando yo me mueva del cuadro de texto se cargue la imagen
+
+//OrderedEnumerableRowCollection:
+//1ro. se agrega el label url imagen en altaqPokemon .
+//2do. agrego el pictureBox.
+//3ro. le agrego el evento leave al txtUrlimagen den altaPokemon
+//4to. se copia el metodo cargarImagen  desde frmPokemon hacia frmAltaPokemon.
+//5to. en el evento leave de txtUrlImagen se usa el metodo leave
+//6to. mapeo el dato de poke.urlImagen en btnAceptarClick para que se guarde el dato en DB y se pueda mostrar posteriormente
+//7. al metodo agregar en negocio, le tengo que agrear  la columna urlImagen en la consulta sql
 
 
 
@@ -42,7 +51,7 @@ namespace winform_app
                 poke.Numero = int.Parse(txtNumero.Text);
                 poke.Nombre = txtNombre.Text;
                 poke.Descripcion = txtDescripcion.Text;
-                //LE AGREGO EL VALOR DE URL IMAGEN por que sino no se carga la imagen; hay que mapearla para poder mostrarla, y eso es lo que hacemos
+                //LE AGREGO EL VALOR DE URL IMAGEN por que sino no se carga la imagen en frmPokemons por que no guardo el dato en l BD; hay que mapearla para poder mostrarla, y eso es lo que hacemos
                 //de igual modo no se rompo por que anteriormente configure lo de que si esta en nulo no se rompe
                 poke.UrlImagen = txtUrlImagen.Text;
                 poke.Tipo = (Elemento)cboTipo.SelectedItem;
@@ -81,7 +90,7 @@ namespace winform_app
             cargarImagen(txtUrlImagen.Text);
         }
 
-        //metodo copiado de frmPokemons; lo reutilizo
+        //metodo copiado de frmPokemons; lo reutilizo: lo ideal seria tener modularizado el metodo para no tenerlo duplicado
         private void cargarImagen(string imagen)
         {
             try

@@ -68,6 +68,7 @@ namespace negocio
                 datos.setearConsulta("Insert into POKEMONS (Numero, Nombre, Descripcion, Activo, IdTipo, IdDebilidad, UrlImagen)values(" + nuevo.Numero + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', 1, @idTipo, @idDebilidad, @urlImagen)");
                 datos.setearParametro("@idTipo", nuevo.Tipo.Id);
                 datos.setearParametro("@idDebilidad", nuevo.Debilidad.Id);
+                //se configura el valor del parametro de UrlImagen
                 datos.setearParametro("@urlImagen", nuevo.UrlImagen);
                 datos.ejecutarAccion();
             }
