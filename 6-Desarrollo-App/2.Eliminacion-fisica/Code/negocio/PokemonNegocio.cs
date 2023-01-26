@@ -108,9 +108,10 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
-
-        public void eliminar(int id)
+        //se agrega
+        public void eliminar(int id)//recibe el aid del objeto que se quiere eliminar
         {
+            //se realiza consulta
             try
             {
                 AccesoDatos datos = new AccesoDatos();
