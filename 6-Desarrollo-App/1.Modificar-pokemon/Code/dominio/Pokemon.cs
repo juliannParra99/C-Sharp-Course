@@ -9,6 +9,10 @@ namespace dominio
 {
     public class Pokemon
     {
+        //LO IMPORTANTE DE EN ESTA SECCION CREAR EL ATRIBUTO 'ID' EN  LA CLASE POKEMONS ES QUE COMO ES UNA CONSULTA DE INSERCION esta seccion
+        //NECESITO USAR EL WHERE PARA QUE NO SE MODIFIQUE TODO, Y EL ID ES LO QUE VOY A USAR COMO CONDICION DEL WHERE.
+
+        //SE AGREGA ID: Ahora lo tenemos que traer en la consulta SQL en pokemon negocio
         public int Id { get; set; }
         [DisplayName("Número")]
         public int Numero { get; set; }

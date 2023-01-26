@@ -10,6 +10,14 @@ using System.Windows.Forms;
 using dominio;
 using negocio;
 
+//MODIFICAR(UPDATE)
+
+//En esta seccion lo que se hace es crear un nuevo boton en el formulario que permite modificar el pokemon. Para  modificar el pokemon se va a usar la misma clase frmAltaPokemon
+//, si bien podria crear un nuevo fromulario para la modificacion, de este modo reutilizo recursos. Cuando se quiere moficar algo, siempre hay que cargar los datos exitstentes
+//para modificar solo lo que necesito sino tengo que cargar todos los datos de  nuevo y no seria viable; por lo que se espera es que me devuelva los datos que ya estan
+//precargas para que yo solo modifique lo que necesito
+
+//MUY IMPORTANTTE: para agregar y modificar, se usa una misma clase pero con SOBRECARGAS DIFERENTES, lo que nos permite utilizar los recursos de una diferente manera.
 namespace winform_app
 {
     public partial class frmPokemons : Form
@@ -40,7 +48,7 @@ namespace winform_app
                 listaPokemon = negocio.listar();
                 dgvPokemons.DataSource = listaPokemon;
                 dgvPokemons.Columns["UrlImagen"].Visible = false;
-                dgvPokemons.Columns["Id"].Visible = false;
+                dgvPokemons.Columns["Id"].Visible = false; //se agrega para que no se vea la columna
                 cargarImagen(listaPokemon[0].UrlImagen);
             }
             catch (Exception ex)
