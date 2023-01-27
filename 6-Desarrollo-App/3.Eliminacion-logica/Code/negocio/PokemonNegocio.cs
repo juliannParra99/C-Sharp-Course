@@ -22,6 +22,7 @@ namespace negocio
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=POKEDEX_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
+                //se le agrega a la consulta otra condicion 'and P.activo = 1', para que solo traigan los que tiene 'activo' en 1
                 comando.CommandText = "Select Numero, Nombre, P.Descripcion, UrlImagen, E.Descripcion Tipo, D.Descripcion Debilidad, P.IdTipo, P.IdDebilidad, P.Id From POKEMONS P, ELEMENTOS E, ELEMENTOS D Where E.Id = P.IdTipo And D.Id = P.IdDebilidad And P.Activo = 1";
                 comando.Connection = conexion;
 
@@ -124,14 +125,19 @@ namespace negocio
                 throw ex;
             }
         }
-
+        // se agrega
+        //la consulta va a ser un update, por que lo que queremos es actualizar la columna 'activo'
+        // para que decidamos despues no mostrar los valores que tengan 0(false) en la app; para este caso
+        //tambien encesitamos el id del pokemon.
         public void eliminarLogico(int id)
         {
             try
             {
                 AccesoDatos datos = new AccesoDatos();
+                //al igual que en eliminar el  id tiene que venir por parametro
                 datos.setearConsulta("update POKEMONS set Activo = 0 Where id = @id");
                 datos.setearParametro("@id", id);
+                //ejecuta la accion
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
