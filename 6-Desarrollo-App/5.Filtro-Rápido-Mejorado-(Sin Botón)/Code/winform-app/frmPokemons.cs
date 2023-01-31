@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using dominio;
 using negocio;
 
+//se modofica solo frmPokemons.
+//hacemos el filtro mas rapido, sin la necesidad  de usar el boton buscar.
+//en esta seccion se va a hacer un filtro rapido donde apenas teclee busque, sin necesidad de utilizar un boton para realizar la busqueda.
+//usamos un evento del textBox
 namespace winform_app
 {
     public partial class frmPokemons : Form
@@ -121,21 +125,27 @@ namespace winform_app
             }
         }
 
+        //se deja vacio por que le quitamos funcionalidad para este ejemplo
         private void btnFiltro_Click(object sender, EventArgs e)
         {
             
         }
 
+        //uno de los posibles metodos para utilizar para que cuando tecleamos busque lo que necesitamos, pero hay un pequeño delay, por lo que utilizamos el evento
+        //TextChanged.
         private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
         {
            
         }
 
+        //utilizamos este filltro por que va sin delay; aunque es cuestion de ir probando para ver cual rinde mejor
+        //contiene exactamente el mismo contenido que el contenido que tenia en la seccion anterior BtnFiltro
         private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
             List<Pokemon> listaFiltrada;
             string filtro = txtFiltro.Text;
 
+            //aca indico que solo busque cuando el txtFiltro.Text sea mayor igual a 3 caracteres; es a gusto, sino lo puedo poner como la seccion anterior
             if (filtro.Length >= 3)
             {
                 listaFiltrada = listaPokemon.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Tipo.Descripcion.ToUpper().Contains(filtro.ToUpper()));
