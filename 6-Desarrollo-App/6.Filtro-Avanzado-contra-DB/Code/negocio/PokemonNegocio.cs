@@ -109,15 +109,29 @@ namespace negocio
             }
         }
 
+        //se agrega metodo: devuelve lista de pokemons; es practicamente igual  al de listar, pero utilizando acceso a datos; inicialmente la consulta es la misma
+        //pero le vamos a concatenar posibles filtros
         public List<Pokemon> filtrar(string campo, string criterio, string filtro)
         {
             List<Pokemon> lista = new List<Pokemon>();
             AccesoDatos datos = new AccesoDatos();
             try
             {
+                //inicialmente la consulta es la misma, pero le voy a concatenar un posible filtro, de 'campo' y 'criterio'  en este caso}
+                //dependiendo de lo que la persona seleccione le voy a concatenar el CAMPO y una clave de busqueda: ejemplo, si fuese numero le agrego
+                //and numero >5 por ejemplo.
+
+                //voy a utilizar un switch y dependiendo de lo que tengn campo y criterio voy a terminar  de formular la consulta
+
+                //dato: podemos poner varios filtros dependiendo de cuantos campos y criterios utilizemos, pero la consulta tambien va a ser mas compleja
+                //para hacer la busqueda mas especifica.
+
+                //no seria practico hacer una busqueda rapida y que vaya a la base de datos por que cada que tecleemos va a consumir
                 string consulta = "Select Numero, Nombre, P.Descripcion, UrlImagen, E.Descripcion Tipo, D.Descripcion Debilidad, P.IdTipo, P.IdDebilidad, P.Id From POKEMONS P, ELEMENTOS E, ELEMENTOS D Where E.Id = P.IdTipo And D.Id = P.IdDebilidad And P.Activo = 1 And ";
                 if(campo == "Número")
                 {
+                    //aca lo que hacemos es preguntar, si el valor del CAMPO elegido es igual a "Numero", se va  a ejecutar un switch donde si lo que contiene criterio
+                    // es el valor de  "mayor a" se va a modificar la consulta agregandole ademas lo que tenia el string "Numero >" + filtro, osea modifica la consulta segun lo elegido
                     switch (criterio)
                     {
                         case "Mayor a":
@@ -136,6 +150,8 @@ namespace negocio
                     switch (criterio)
                     {
                         case "Comienza con":
+                            // como Nombre es un string  en este caso el filtro va concatenado con comillas y 2 "+"
+                            //si filtro esta vacio  y tocamos el boton buscar, el "%" trae todo el contenido. por buscar por texto vacio en este caso trae todo
                             consulta += "Nombre like '" + filtro + "%' ";
                             break;
                         case "Termina con":
@@ -148,6 +164,10 @@ namespace negocio
                 }
                 else
                 {
+                    //  PARTE UTIL PARA EL USO DE SQL
+                    //ester caso es string  en la consulta sql 'like' que es para hacer busqueda por string: y para buscar un contenido de string
+                    //uso '% %' dependiendo de donde se encuentra busa de una manera o de otra
+
                     switch (criterio)
                     {
                         case "Comienza con":
@@ -161,9 +181,12 @@ namespace negocio
                             break;
                     }
                 }
+                //se setea la consulta, y le paso la consulta que quedo armada
 
                 datos.setearConsulta(consulta);
                 datos.ejecutarLectura();
+
+                //esto es lo del lector
                 while (datos.Lector.Read())
                 {
                     Pokemon aux = new Pokemon();

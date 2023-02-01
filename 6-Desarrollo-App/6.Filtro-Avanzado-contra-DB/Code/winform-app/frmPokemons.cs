@@ -10,6 +10,12 @@ using System.Windows.Forms;
 using dominio;
 using negocio;
 
+
+//aca vamos a construir un filtro avanzado que permita buscar por campo y por criterio. Permite buscar mas rapidamente.Esto 
+//medainte una nueva consulta a la base de datos
+
+//archivos modificados en esta seccion:
+//-frmPokemons
 namespace winform_app
 {
     public partial class frmPokemons : Form
@@ -20,6 +26,10 @@ namespace winform_app
             InitializeComponent();
         }
 
+
+        //aca cargamos los desplegables
+        //a ambos desplegables se le condifgura dropDown Style en dropDownList, para que no se pueda seleccionar
+        //IMPORTANTE: al comboBox de 'Criterio' voy cargar las opciones dependiendo de lo que elegiste en lo primero
         private void frmPokemons_Load(object sender, EventArgs e)
         {
             cargar();
@@ -130,9 +140,13 @@ namespace winform_app
             PokemonNegocio negocio = new PokemonNegocio();
             try
             {
+                //capturo los valores de busqueda
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();
                 string filtro = txtFiltroAvanzado.Text;
+
+                //dgvPokemons.DataSource para que lo muestre en la grilla
+                //creo el metodo filtrar y le paso por parametro estos 3 criterios
                 dgvPokemons.DataSource = negocio.filtrar(campo, criterio, filtro);
 
             }
@@ -167,11 +181,22 @@ namespace winform_app
             ocultarColumnas();
         }
 
+        //este desplegable lo voy a cargar con los campos a elegir, pueden ser los que queramos: en este caso va a ser numero (aunque podria ser precio, factura
+        // edad, etc, lo que necesite)
+
+        //dato: esto tambien lo podriamos aplicar al filtro rapido y que busque sobre la coleccion con estos filtros, pero en este caso lo estamos haciendo mas puntual
+        //y va a ir a la base de datos y va a traer los registros puntuales
+
+        //despues en el boton 'buscar': voy a tomar los valores de los criterios que estamos pasando para la busqueda y vamos a llamar un metodo que tome esos valores
+        //y realice la busqueda contra la base de datos
         private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //esto guarda ele elemento seleccionado: puede ser Numero, nombre o descripcion
+            //quedan hacer algunas validaciones: ejemplo, si  campo pongo numero y el filtro esta vacio se rompe, por que el valor es null
             string opcion = cboCampo.SelectedItem.ToString();
             if(opcion == "Número")
             {
+                //si es numero agrega esto al desplegable de criterio
                 cboCriterio.Items.Clear();
                 cboCriterio.Items.Add("Mayor a");
                 cboCriterio.Items.Add("Menor a");
@@ -179,6 +204,7 @@ namespace winform_app
             }
             else
             {
+                //pra descripcion igual por que son texto
                 cboCriterio.Items.Clear();
                 cboCriterio.Items.Add("Comienza con");
                 cboCriterio.Items.Add("Termina con");
